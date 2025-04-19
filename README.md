@@ -2,22 +2,11 @@
 
 This is the backend API for the DevTrack application, a tool designed to help developers track their projects, tasks, and progress.
 
-## Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-*   [Go](https://golang.org/doc/install) (version 1.24 or later recommended)
-*   [Docker](https://docs.docker.com/get-docker/)
-*   [Docker Compose](https://docs.docker.com/compose/install/)
-*   [sqlc](https://docs.sqlc.dev/en/latest/overview/install.html) (for generating Go code from SQL)
-*   [golang-migrate/migrate](https://github.com/golang-migrate/migrate/tree/master/cmd/migrate) CLI (for manual migration management if needed, though Docker handles it on startup)
-*   [Make](https://www.gnu.org/software/make/) (Optional, for potentially adding helper commands later)
-
 ## Setup
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/ritikchawla/devtrack.git
     cd devtrack
     ```
 
@@ -36,7 +25,7 @@ Before you begin, ensure you have the following installed:
     # Database Configuration
     DB_DRIVER=postgres
     POSTGRES_USER=root
-    POSTGRES_PASSWORD=password # Change this in production!
+    POSTGRES_PASSWORD=password
     POSTGRES_DB=devtrack
     DB_HOST=devtrack_postgres # Service name in docker-compose
     DB_PORT=5432
